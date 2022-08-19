@@ -1,6 +1,12 @@
 @media screen and (max-width: 576px) {
   .comment-item {
-    max-width: 320px;
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .comment-item {
+    min-width: 280px;
   }
 }
 
@@ -9,8 +15,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 320px;
-  width: 320px;
+  max-width: 220px;
+  width: 280px;
 }
 
 .content {
@@ -71,7 +77,7 @@
 .delete-icon {
   width: 20px;
   height: 20px;
-  margin-left: -20px;
+  margin-left: -50px;
 }
 
 .delete-btn {

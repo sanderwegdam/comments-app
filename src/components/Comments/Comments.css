@@ -46,7 +46,7 @@
 }
 
 .name-field {
-  width: 280px;
+  width: 260px;
   padding: 5px;
   font-size: 14px;
   margin-bottom: 20px;
@@ -54,7 +54,7 @@
   border-radius: 8px;
 }
 .comment-field {
-  width: 280px;
+  width: 260px;
   height: 100px;
   font-family: "Verdana";
   padding: 5px;
