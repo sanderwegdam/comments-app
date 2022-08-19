@@ -1,0 +1,20 @@
+.header {
+  background: #202024;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

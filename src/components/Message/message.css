@@ -1,0 +1,86 @@
+@media screen and (max-width: 576px) {
+  .comment-item {
+    max-width: 320px;
+  }
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  width: 360px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.user-name {
+  background-color: #222;
+  padding: 10px;
+  width: fit-content;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+
+.content-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.time {
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.comment-line {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 0px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.delete-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.delete-btn {
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  background-color: transparent;
+  outline: none;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: 2%;
+}
