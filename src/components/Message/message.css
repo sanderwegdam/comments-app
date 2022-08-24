@@ -17,6 +17,9 @@
   align-items: center;
   max-width: 220px;
   width: 280px;
+  margin-bottom: 5px;
+  background-color: #e6e6e6;
+  padding: 20px;
 }
 
 .content {
