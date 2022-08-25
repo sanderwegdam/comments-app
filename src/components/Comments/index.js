@@ -6,6 +6,7 @@ import Header from '../Header/Header'
 import Button from 'react-bootstrap/Button';
 
 class Comments extends Component {
+
   state = {
     name: '',
     comment: '',
@@ -13,7 +14,21 @@ class Comments extends Component {
     count: 0,
     fields: {},
     errors: {},
+    commentBox: []
   }
+
+  // getStorage() {
+  //   const item = document.querySelector(".comment");
+  //   const temp = localStorage.getItem("comments");
+  //   const een = item.push = temp;
+  //   een.innerHTML = item;
+  //   console.log(een);
+  // }
+
+  // setStorage() {
+  //   const item = document.getElementsByClassName("comment").outerHTML;
+  //   localStorage.setItem("comments", item);
+  // }
 
   handleValidation() {
     let fields = this.state.fields;
@@ -46,7 +61,6 @@ class Comments extends Component {
       exit
     }
     else {
-
       const { name, comment } = this.state.fields;
       const firstName = name;
       const date = new Date().toLocaleString();
@@ -80,7 +94,7 @@ class Comments extends Component {
     return (
       <>
         <Header />
-        <div className="main-container">
+        <div className="main-container" >
           <div className="container">
             <form className="form-container" onSubmit={this.CheckComment}>
               <input
@@ -101,9 +115,9 @@ class Comments extends Component {
               <Button size="lg" type="submit" className="btn">Plaats Comment</Button>
             </form>
           </div>
-          <p className="count"> {count ? 'Comments ' + count + '' : ''}</p>
-          <p className="comments-container">
-            <ul className="comment">
+          <div className="count"> {count ? 'Comments ' + count + '' : ''}</div>
+          <div className="comments-container">
+            <ul id="comment" className="comment">
               {arrayList.map(eachObject => (
                 <CommentItem
                   key={eachObject.id}
@@ -112,7 +126,7 @@ class Comments extends Component {
                 />
               ))}
             </ul>
-          </p>
+          </div>
         </div>
       </>
     )

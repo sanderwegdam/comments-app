@@ -13,6 +13,7 @@ const CommentItem = props => {
   const delButton = () => {
     deleteComment(id)
   }
+
   return (
     <li className="comment-item" key={id}>
       <div className="content">
@@ -32,7 +33,7 @@ const CommentItem = props => {
           testid="delete"> <IoMdTrash className="delete-icon" />
         </button>
       </div>
-    </li>
+    </li >
   )
 }
 export default CommentItem
