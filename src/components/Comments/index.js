@@ -102,14 +102,16 @@ class Comments extends Component {
                 onChange={this.handleChange.bind(this, "name")}
                 value={this.state.name["name"]} />
               <span style={{ color: "red", fontSize: "14px", paddingBottom: "15px", fontSize: "13px", fontFamily: "Verdana" }}>{this.state.errors["name"]}</span>
-              <TextareaAutosize label="Comment" variant="standard" minRows={5} style={{ border: "1px solid lightgray" }}
+              <TextField multiline
+                rows={3}
+                maxRows={3} label="Comment" variant="outlined" minRows={3}
                 className="comment-field"
                 placeholder="Je comment"
                 ref={this.inputComment}
                 onChange={this.handleChange.bind(this, "comment")}
                 value={this.state.comment["comment"]}
               />
-              <span style={{ color: "red", paddingBottom: "15px", fontSize: "13px", fontFamily: "Verdana" }}>{this.state.errors["comment"]}</span>
+              <span style={{ color: "red", paddingBottom: "20px", paddingTop: "10px", fontSize: "13px", fontFamily: "Verdana" }}>{this.state.errors["comment"]}</span>
               <Button size="lg" type="submit" className="btn">Plaats Comment</Button>
             </form>
           </div>
