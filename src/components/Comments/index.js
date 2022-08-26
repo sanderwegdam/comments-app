@@ -4,8 +4,16 @@ import CommentItem from '../Message'
 import './Comments.css'
 import Header from '../Header/Header'
 import Button from 'react-bootstrap/Button';
+import TextField from '@mui/material/TextField';
+import TextareaAutosize from '@mui/base/TextareaAutosize';
+import React, { createRef } from "react";
 
 class Comments extends Component {
+
+  componentDidMount() {
+    this.inputName = React.createRef();
+    this.inputComment = React.createRef();
+  }
 
   state = {
     name: '',
@@ -16,19 +24,6 @@ class Comments extends Component {
     errors: {},
     commentBox: []
   }
-
-  // getStorage() {
-  //   const item = document.querySelector(".comment");
-  //   const temp = localStorage.getItem("comments");
-  //   const een = item.push = temp;
-  //   een.innerHTML = item;
-  //   console.log(een);
-  // }
-
-  // setStorage() {
-  //   const item = document.getElementsByClassName("comment").outerHTML;
-  //   localStorage.setItem("comments", item);
-  // }
 
   handleValidation() {
     let fields = this.state.fields;
@@ -97,21 +92,24 @@ class Comments extends Component {
         <div className="main-container" >
           <div className="container">
             <form className="form-container" onSubmit={this.CheckComment}>
-              <input
+              <TextField id="outlined-basic" label="Naam" variant="outlined"
+                style={{ marginBottom: "10px" }}
                 type="text"
                 className="name-field"
+                autoFocus
                 placeholder="Geef hier je naam in"
-                ref="name"
+                ref={this.inputName}
                 onChange={this.handleChange.bind(this, "name")}
                 value={this.state.name["name"]} />
-              <span style={{ color: "red", fontSize: "14px", paddingBottom: "15px" }}>{this.state.errors["name"]}</span>
-              <textarea
+              <span style={{ color: "red", fontSize: "14px", paddingBottom: "15px", fontSize: "13px", fontFamily: "Verdana" }}>{this.state.errors["name"]}</span>
+              <TextareaAutosize label="Comment" variant="standard" minRows={5} style={{ border: "1px solid lightgray" }}
                 className="comment-field"
                 placeholder="Je comment"
-                ref="comment"
+                ref={this.inputComment}
                 onChange={this.handleChange.bind(this, "comment")}
-                value={this.state.comment["comment"]} />
-              <span style={{ color: "red", paddingBottom: "15px", fontSize: "14px" }}>{this.state.errors["comment"]}</span>
+                value={this.state.comment["comment"]}
+              />
+              <span style={{ color: "red", paddingBottom: "15px", fontSize: "13px", fontFamily: "Verdana" }}>{this.state.errors["comment"]}</span>
               <Button size="lg" type="submit" className="btn">Plaats Comment</Button>
             </form>
           </div>

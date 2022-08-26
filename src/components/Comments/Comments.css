@@ -7,7 +7,7 @@
   }
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 2048px) {
   .main-container {
     padding: 40px;
   }
@@ -23,6 +23,7 @@
   align-items: center;
   height: 100%;
   font-family: "Verdana";
+  padding: 40px;
 }
 
 .container {
@@ -42,36 +43,23 @@
 
 .name-field {
   width: 260px;
-  padding: 5px;
   font-size: 14px;
-  margin-bottom: 10px;
   border-radius: 5px;
-  line-height: 1.4;
-  font-family: "Verdana";
-  border: 1px solid black;
-}
-
-.name-field:focus,
-.name-field:hover {
-  box-shadow: 0 0 0 1px rgb(123, 127, 129);
 }
 
 .comment-field {
   width: 260px;
   height: 100px;
-  font-family: "Verdana";
-  padding: 5px;
-  font-size: 14px;
+  font-family: "Roboto";
+  padding: 15px;
+  font-size: 16px;
   margin-bottom: 10px;
-  border: 1px solid black;
   border-radius: 5px;
-  line-height: 1.4;
   resize: none;
-}
-
-.comment-field:focus,
-.comment-field:hover {
-  box-shadow: 0 0 0 1px rgb(123, 127, 129);
+  width: 100%;
+  max-width: 400px;
+  outline: none;
+  background: #fff;
 }
 
 ::placeholder {
