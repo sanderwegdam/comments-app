@@ -111,7 +111,7 @@ class Comments extends Component {
                 onChange={this.handleChange.bind(this, "comment")}
                 value={this.state.comment["comment"]}
               />
-              <span style={{ color: "red", paddingBottom: "20px", paddingTop: "10px", fontSize: "13px", fontFamily: "Verdana" }}>{this.state.errors["comment"]}</span>
+              <span style={{ color: "red", paddingBottom: "20px", paddingTop: "15px", fontSize: "13px", fontFamily: "Verdana" }}>{this.state.errors["comment"]}</span>
               <Button size="lg" type="submit" className="btn">Plaats Comment</Button>
             </form>
           </div>
