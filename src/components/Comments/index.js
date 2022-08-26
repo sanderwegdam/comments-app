@@ -58,7 +58,12 @@ class Comments extends Component {
     else {
       const { name, comment } = this.state.fields;
       const firstName = name;
-      const date = new Date().toLocaleString();
+      const d = new Date();
+      const date = d.toLocaleString([], {
+        timeStyle: "medium",
+        hour12: false,
+        dateStyle: "short"
+      }).replace(/AM|PM/g, "");
       const object = {
         id: uuidv4(),
         firstNames: firstName,

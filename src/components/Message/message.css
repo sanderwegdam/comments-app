@@ -56,16 +56,15 @@
 }
 
 .time {
-  display: inline;
+  display: flex;
   flex-wrap: wrap-reverse;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #94a3b8;
-  word-wrap: break-word;
+  margin: 0 auto;
   margin-top: 20px;
-  transform: translateX(40px);
   font-size: 12px;
 }
 
