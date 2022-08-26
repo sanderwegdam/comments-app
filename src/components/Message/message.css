@@ -23,49 +23,62 @@
 }
 
 .content {
-  display: flex;
-  flex-direction: row;
+  max-width: 220px;
+  display: inline-flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
 }
 
 .user-name {
+  display: inline;
+  margin: 0 auto;
+  word-break: break-all;
   background-color: #222;
   padding: 10px;
   width: fit-content;
+  max-width: 220px;
   color: white;
   font-size: 16px;
   text-align: center;
   border-radius: 25px;
-  margin-right: 20px;
 }
 
 .content-item {
+  max-width: 220px;
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   margin-top: 10px;
 }
 
-.name {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
 .time {
+  display: inline;
+  flex-wrap: wrap-reverse;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: #94a3b8;
+  word-wrap: break-word;
+  margin-top: 20px;
+  transform: translateX(40px);
   font-size: 12px;
-  padding: 5px;
 }
 
 .comment-line {
+  display: inline;
+  align-content: center;
   color: #64748b;
   font-size: 14px;
   margin-top: 0px;
+  max-width: 220px;
+  width: 100%;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .icons {

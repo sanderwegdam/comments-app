@@ -18,10 +18,9 @@ const CommentItem = props => {
     <li className="comment-item" key={id}>
       <div className="content">
         <p className="user-name">{firstNames}</p>
+        <p className="time">{dates}</p>
         <div className="content-item">
-          <div className="name">
-            <p className="time">{dates}</p>
-          </div>
+
           <p className="comment-line">{comments}</p>
         </div>
       </div>
