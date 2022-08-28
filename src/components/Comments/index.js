@@ -5,11 +5,9 @@ import './Comments.css'
 import Header from '../Header/Header'
 import Button from 'react-bootstrap/Button';
 import TextField from '@mui/material/TextField';
-import TextareaAutosize from '@mui/base/TextareaAutosize';
 import React, { createRef } from "react";
 
 class Comments extends Component {
-
   componentDidMount() {
     this.inputName = React.createRef();
     this.inputComment = React.createRef();
@@ -19,7 +17,6 @@ class Comments extends Component {
     name: '',
     comment: '',
     arrayList: [],
-    count: 0,
     fields: {},
     errors: {},
     commentBox: []
@@ -74,8 +71,7 @@ class Comments extends Component {
       this.setState(prevState => ({
         arrayList: [...prevState.arrayList, object],
         name: '',
-        comment: '',
-        count: prevState.count + 1,
+        comment: ''
       }))
     }
   }
@@ -83,14 +79,13 @@ class Comments extends Component {
   deleteComment = id => {
     const { arrayList } = this.state
     const filteredList = arrayList.filter(eachValue => eachValue.id !== id)
-    this.setState(prevState => ({
-      arrayList: filteredList,
-      count: prevState.count - 1,
-    }))
+    this.setState({
+      arrayList: filteredList
+    })
   }
 
   render() {
-    const { arrayList, count } = this.state
+    const { arrayList } = this.state;
     return (
       <>
         <Header />
@@ -109,7 +104,7 @@ class Comments extends Component {
               <span style={{ color: "red", fontSize: "14px", paddingBottom: "15px", fontSize: "13px", fontFamily: "Verdana" }}>{this.state.errors["name"]}</span>
               <TextField multiline
                 rows={3}
-                maxRows={3} label="Comment" variant="outlined" minRows={3}
+                label="Comment" variant="outlined"
                 className="comment-field"
                 placeholder="Je comment"
                 ref={this.inputComment}
@@ -120,9 +115,8 @@ class Comments extends Component {
               <Button size="lg" type="submit" className="btn">Plaats Comment</Button>
             </form>
           </div>
-          <div className="count"> {count ? 'Comments ' + count + '' : ''}</div>
           <div className="comments-container">
-            <ul id="comment" className="comment">
+            <div id="comment" className="comment">
               {arrayList.map(eachObject => (
                 <CommentItem
                   key={eachObject.id}
@@ -130,7 +124,7 @@ class Comments extends Component {
                   deleteComment={this.deleteComment}
                 />
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </>

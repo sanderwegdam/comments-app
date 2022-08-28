@@ -19,16 +19,14 @@
   width: 280px;
   margin-bottom: 5px;
   background-color: #e6e6e6;
-  padding: 20px;
 }
 
 .content {
-  max-width: 220px;
   display: inline-flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
+  padding: 20px;
 }
 
 .user-name {

@@ -15,13 +15,12 @@ const CommentItem = props => {
   }
 
   return (
-    <li className="comment-item" key={id}>
+    <div className="comment-item" key={id}>
       <div className="content">
         <p className="user-name">{firstNames}</p>
         <p className="time">{dates}</p>
         <div className="content-item">
-
-          <p className="comment-line">{comments}</p>
+          <p className="comment-line" >{comments}</p>
         </div>
       </div>
       <div className="icons">
@@ -32,7 +31,7 @@ const CommentItem = props => {
           testid="delete"> <IoMdTrash className="delete-icon" />
         </button>
       </div>
-    </li >
+    </div>
   )
 }
 export default CommentItem
